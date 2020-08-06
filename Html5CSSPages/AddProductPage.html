@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:  #4CAF50;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+li .dropdown .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+li .dropdown .dropdown-content a:hover:not(.active)  {
+  background-color: #ddd;
+}
+
+li .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.mainContainer{
+  width:500px;
+  height:500px;
+  margin-left: 400px;
+  align-content: center;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+}
+
+.mainContainer h1 {
+  text-align: center;
+}
+
+input[type=text], input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+select {
+  width: 106%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+select:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+.addproduct {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  margin-left: 130px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+  
+}
+
+.addproduct:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+</style>
+</head>
+<body>
+
+<ul class="topnav">
+  <li><a class="active" href="HomePage.html">HOME</a></li>
+  <li><a href="DashboardPage.html">DASHBOARD</a></li>
+  <li>
+    <div class="dropdown">
+        <button class="dropbtn">PRODUCT
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="AddProductPage.html">Add Product</a>
+          <a href="DisplayProductPage.html">Display Product</a>
+        </div>
+      </div> 
+  </li>
+  <li class="right"><a href="SignUpPage.html">SIGN UP NOW</a></li>
+  <li class="right"><a href="LoginPage.html">SIGN IN</a></li>
+</ul>
+
+<div class="mainContainer">
+  <h1>Add a New Product</h1>
+
+  <label for="name"><b>NAME</b></label>
+  <input type="text" placeholder="Enter Name" name="name" id="name" required>
+  <br>
+
+  <label for="quantity"><b>QUANTITY</b></label>
+  <input type="text" placeholder="Enter Quantity" name="quantity" id="quantity" required>
+  <br>
+
+  <label for="price"><b>PRICE</b></label>
+  <input type="number" placeholder="Enter Price" name="price" id="price" required>
+
+  <label for="category"><b>CATEGORY</b></label><br>
+  <select name="category" id="category">
+    <option value="electronics">Electronics</option>
+    <option value="homeDecors">Home Decors</option>
+  </select>
+
+  <br><br>
+
+  <button type="submit" class="addproduct">ADD PRODUCT</button>
+
+</div>
+
+</body>
+</html>
